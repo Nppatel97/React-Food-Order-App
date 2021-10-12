@@ -2,7 +2,7 @@
   cursor: pointer;
   font: inherit;
   border: none;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.219);
   color: white;
   padding: 0.75rem 3rem;
   display: flex;
@@ -35,23 +35,28 @@
 }
 
 .bump {
-  animation: bump 300ms ease-out;
+  animation: bump 0.3s ease;
 }
 
 @keyframes bump {
   0% {
     transform: scale(1);
+    background-color: #000000c7;
   }
   10% {
     transform: scale(0.9);
+    background-color: #0d530ac0;
   }
   30% {
     transform: scale(1.1);
+    background-color: #0d530ac0;
   }
   50% {
     transform: scale(1.15);
+    background-color: #0d530ac0;
   }
   100% {
     transform: scale(1);
+    background-color: #000000c7;
   }
 }
