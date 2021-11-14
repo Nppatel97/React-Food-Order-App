@@ -19,6 +19,16 @@
   text-align: right;
 }
 
+.button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  /* padding: 0.5rem 2rem; */
+  margin-left: 1rem;
+  color: #5a1a01;
+}
+
 .actions button {
   font: inherit;
   cursor: pointer;
