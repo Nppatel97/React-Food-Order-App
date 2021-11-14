@@ -18,6 +18,7 @@ const Checkout = (props) => {
 
   const confirmHandler = (event) => {
     console.log(event.target);
+    console.log("THIS WORKS CONFIRMED ORDER!");
     event.preventDefault();
 
     const inputName = nameInputRef.current.value;
@@ -43,6 +44,13 @@ const Checkout = (props) => {
     if (!validForm) {
       return;
     }
+
+    props.onConfirm({
+      name: inputName,
+      street: inputStreet,
+      city: inputCity,
+      zipCode: inputZipcode,
+    });
   };
 
   const nameControlClasses = `${classes.control} ${
@@ -89,7 +97,9 @@ const Checkout = (props) => {
         <button type="button" onClick={props.onCancel}>
           Cancel
         </button>
-        <button className={classes.submit}>Confirm</button>
+        <button type="submit" className={classes.submit}>
+          Confirm
+        </button>
       </div>
     </form>
   );
