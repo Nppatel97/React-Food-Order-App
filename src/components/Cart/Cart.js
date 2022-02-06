@@ -80,13 +80,13 @@ const Cart = (props) => {
     <React.Fragment>
       {!isCheckout && cartItems}
       <div className={classes.total}>
-        <span>Total Amount</span>
-        <span>{totalAmt}</span>
         {isCheckout && (
-          <button className={classes.button} onClick={seeOrderHandler}>
-            View Order &gt;
+          <button className={classes.order} onClick={seeOrderHandler}>
+            &#8249; Your Order
           </button>
         )}
+        <span>Total Amount</span>
+        <span>{totalAmt}</span>
       </div>
       {isCheckout && (
         <Checkout onCancel={props.onCloseCart} onConfirm={submitOrderHandler} />
@@ -95,9 +95,11 @@ const Cart = (props) => {
     </React.Fragment>
   );
 
-  const isSubmittingModalContent = <p>Sending Order homie. Wait!...</p>;
+  const isSubmittingModalContent = (
+    <p style={{ color: "#fff" }}>Processing Order, please Wait...</p>
+  );
   const didSubmitModalContent = (
-    <p>We Good! Now you wait for food to arrive.</p>
+    <p style={{ color: "#fff" }}>Awesome! Your order is placed.</p>
   );
 
   return (

@@ -2,7 +2,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  max-height: 20rem;
+  max-height: 70vh;
   overflow: auto;
 }
 
@@ -11,8 +11,21 @@
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 1rem 0;
+  color: whitesmoke;
+}
+
+.order {
+  position: absolute;
+  bottom: 3.7rem;
+  left: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  /* margin-left: 1rem; */
+  color: #479244;
 }
 
 .actions {
@@ -26,31 +39,38 @@
   border: none;
   /* padding: 0.5rem 2rem; */
   margin-left: 1rem;
-  color: #5a1a01;
+  color: #479244;
 }
 
 .actions button {
   font: inherit;
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid #8a2b06;
+  border: 0px solid #479244;
   padding: 0.5rem 2rem;
   border-radius: 25px;
   margin-left: 1rem;
+  transition: 0.3s ease;
 }
 
 .actions button:hover,
 .actions button:active {
-  background-color: #5a1a01;
-  border-color: #5a1a01;
+  background-color: #479244;
+  border-color: #479244;
   color: white;
 }
 
 .actions .button--alt {
-  color: #8a2b06;
+  /* border-color: #479244; */
+  color: #ca3e51;
+}
+
+.actions .button--alt:hover {
+  color: #fff;
+  background-color: #ca3e51;
 }
 
 .actions .button {
-  background-color: #8a2b06;
+  background-color: #479244;
   color: white;
 }

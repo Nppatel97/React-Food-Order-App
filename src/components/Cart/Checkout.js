@@ -17,8 +17,8 @@ const Checkout = (props) => {
   const cityInputRef = useRef();
 
   const confirmHandler = (event) => {
-    console.log(event.target);
-    console.log("THIS WORKS CONFIRMED ORDER!");
+    // console.log(event.target);
+    // console.log("THIS WORKS CONFIRMED ORDER!");
     event.preventDefault();
 
     const inputName = nameInputRef.current.value;

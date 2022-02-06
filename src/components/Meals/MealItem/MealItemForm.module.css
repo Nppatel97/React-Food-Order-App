@@ -1,20 +1,35 @@
 .form {
   text-align: right;
+  /* margin-top: 0.5em; */
+  display: inline-flex;
+}
+
+.form input {
+  background-color: #ffffff2d;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  padding: 0em 0.8em;
+  width: 4rem;
+  height: 100%;
 }
 
 .form button {
   font: inherit;
   cursor: pointer;
-  background-color: #0d530ac0;
-  border: 1px solid #0d530ac0;
+  background-color: #ffffff2d;
+  border: none;
   color: white;
-  padding: 0.25rem 2rem;
+  margin: 0em 0.5em;
+  height: 100%;
+  padding: 0.3rem 1.5rem;
   border-radius: 20px;
   font-weight: bold;
+  transition: 0.3s ease;
 }
 
 .form button:hover,
 .form button:active {
-  background-color: #0f680cc0;
-  border-color: #0f680cc0;
+  background-color: #479244;
+  border-color: #479244;
 }
