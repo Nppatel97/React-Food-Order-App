@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import sensitive from "../../sensitive";
 import CartContext from "../../store/cart-context";
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
@@ -33,16 +34,13 @@ const Cart = (props) => {
   const submitOrderHandler = async (userData) => {
     // console.log("SO DOES YOU WORK SUBMITORDER!??");
     setIsSubmitting(true);
-    await fetch(
-      "https://foodzie-9a1b3-default-rtdb.firebaseio.com/orders.json",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          user: userData,
-          orderedItems: cartCtx.items,
-        }),
-      }
-    );
+    await fetch(`${sensitive.FIREBASE_URL}/orders.json`, {
+      method: "POST",
+      body: JSON.stringify({
+        user: userData,
+        orderedItems: cartCtx.items,
+      }),
+    });
     setIsSubmitting(false);
     setDidSubmit(true);
     cartCtx.clearCart();

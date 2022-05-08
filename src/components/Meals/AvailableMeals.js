@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import classes from "./AvailableMeals.module.css";
+import sensitive from "../../sensitive";
 import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 
@@ -11,9 +12,7 @@ const AvailableMeals = () => {
 
   useEffect(() => {
     const fetchMeals = async () => {
-      const response = await fetch(
-        "https://foodzie-9a1b3-default-rtdb.firebaseio.com/meals.json"
-      );
+      const response = await fetch(`${sensitive.FIREBASE_URL}/meals.json`);
 
       if (!response.ok) {
         throw new Error("Oopsie! Something's wrong...");
